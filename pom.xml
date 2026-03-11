@@ -11,7 +11,7 @@
 
     <name>cache-consistency-kit</name>
     <description>Open-source cache and persistent store consistency toolkit.</description>
-    <url>https://github.com/REPLACE_WITH_YOUR_ORG/cache-fence</url>
+    <url>https://github.com/realcalu/cache-fence</url>
 
     <licenses>
         <license>
@@ -22,16 +22,16 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:https://github.com/REPLACE_WITH_YOUR_ORG/cache-fence.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/REPLACE_WITH_YOUR_ORG/cache-fence.git</developerConnection>
-        <url>https://github.com/REPLACE_WITH_YOUR_ORG/cache-fence</url>
+        <connection>scm:git:https://github.com/realcalu/cache-fence.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/realcalu/cache-fence.git</developerConnection>
+        <url>https://github.com/realcalu/cache-fence</url>
         <tag>HEAD</tag>
     </scm>
 
     <developers>
         <developer>
-            <id>replace-me</id>
-            <name>Replace With Maintainer Name</name>
+            <id>realcalu</id>
+            <name>calu</name>
         </developer>
     </developers>
 

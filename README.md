@@ -376,7 +376,7 @@ cck.compensation.replay-pending-on-startup=true
 - [SECURITY.md](SECURITY.md)
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
-发布前还需要把根 POM 里的 `REPLACE_WITH_YOUR_ORG` 和 `Replace With Maintainer Name` 替换成真实仓库和维护者信息。
+根 POM 的仓库和维护者信息已经指向当前开源仓库。
 
 ## 当前边界
 
