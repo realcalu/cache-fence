@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: cache-consistency-demo
+  datasource:
+    url: ${DEMO_MYSQL_URL:jdbc:mysql://127.0.0.1:3306/cache_demo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DEMO_MYSQL_USERNAME:demo}
+    password: ${DEMO_MYSQL_PASSWORD:demo}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      mode: ${DEMO_SQL_INIT_MODE:always}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+demo:
+  redis-url: ${DEMO_REDIS_URL:redis://127.0.0.1:6379}
+  cache-ttl-seconds: ${DEMO_CACHE_TTL_SECONDS:600}
+  compensation:
+    enabled: ${DEMO_COMPENSATION_ENABLED:false}
+    max-retries: ${DEMO_COMPENSATION_MAX_RETRIES:3}
+    retry-delay-millis: ${DEMO_COMPENSATION_RETRY_DELAY_MILLIS:500}
+    store-path: ${DEMO_COMPENSATION_STORE_PATH:runtime/cck-compensation.log}
+
+cck:
+  key-prefix: demo-user-profile
+  lease-ttl-seconds: 3
+  write-lock-ttl-seconds: 5
+  retry-backoff-millis: 50
+  ghost-write-healing-enabled: true
+  metrics:
+    enabled: true
